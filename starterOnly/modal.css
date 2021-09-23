@@ -194,6 +194,9 @@ label {
   font-weight: normal;
   display: inline-block;
   margin-bottom: 11px;
+
+ /* margin-top: 11px;  *********************************************************************************************************/
+
 }
 input {
   padding: 8px;
