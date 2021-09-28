@@ -10,6 +10,37 @@
 }
 /* Landing Page */
 
+
+/* ajout message error ********************************/
+.formData small{
+  visibility: hidden;
+  font-size: 18px;
+}
+.formData.success input{
+  border-color:#2ecc71;
+}
+.formData.error input{
+  border-color:#e54858;
+}
+
+.formData.error small{
+  color: #e54858;
+  visibility: visible;
+}
+
+.formconfirm{
+  display: block; 
+  margin: 15px auto;
+  color: #2ecc71;
+  padding: 20px;
+}
+
+
+.hidden{
+  display: none;
+}
+/*/////////////////////////////////////////////////////////*/
+
 body {
   margin: 0;
   display: flex;
@@ -23,7 +54,7 @@ body {
 
 p {
   margin-bottom: 0;
-  padding: 0.5vw;
+  padding: 0.3vw 0;
 }
 
 img {
@@ -68,6 +99,46 @@ img {
   display: none;
 }
 
+
+@media screen and (max-width: 769px) {
+  .topnav a {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+    color: red;
+    font-size: 27px;
+  }
+} 
+
+@media screen and (max-width:540px) {
+  .header-logo img {
+    height: 30px;
+    padding-left: 20px;
+  }
+  .topnav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .hero-content{
+    text-align: center;
+    min-width: 250px;
+  }
+  .hero-headline{
+    font-size: 3.5rem;
+  }
+}
+@media screen and (min-width:800px) and (max-width:960px){
+  
+  h1.hero-headline {
+    display: flex;
+    justify-content: left;
+    width: 700px;
+    flex-wrap: wrap;
+    font-size: 76px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .topnav a {display: none;}
   .topnav a.icon {
@@ -81,7 +152,7 @@ img {
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
-    top: 0;
+     /* top: 0; */ 
   }
   .topnav.responsive a {
     float: none;
@@ -89,17 +160,6 @@ img {
     text-align: left;
   }
 }
-
-
-
- @media screen and (max-width: 540px) {
-  .topnav a {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-    margin-top: -15px;
-  }
-} 
 
 main {
   font-size: 130%;
@@ -194,6 +254,8 @@ label {
   font-weight: normal;
   display: inline-block;
   margin-bottom: 11px;
+  margin-top: 5px;  
+
 }
 input {
   padding: 8px;
@@ -208,6 +270,7 @@ input {
   font-size: 20px;
   height: 48px;
 }
+/*
 .formData[data-error]::after {
   content: attr(data-error);
   font-size: 0.4em;
@@ -402,7 +465,7 @@ input[data-error]::after {
 /* custom select end */
 .text-label {
   font-weight: normal;
-  font-size: 16px;
+  font-size: 17px;
 }
 .hero-section {
   min-height: 93vh;
@@ -420,7 +483,7 @@ input[data-error]::after {
   color: #fff;
   position: relative;
   text-align: left;
-  min-width: 424px;
+  min-width: 400px;
 }
 .hero-content::after {
   content: "";
