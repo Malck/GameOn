@@ -115,6 +115,9 @@ img {
     height: 30px;
     padding-left: 20px;
   }
+  .hero-text {
+    width: 250px;
+  }
   .topnav{
     display: flex;
     justify-content: space-between;

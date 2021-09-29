@@ -53,20 +53,21 @@
       </div>
 
       <div class="bground">
+
         <div class="content">
           <span class="close" id="close"></span>
           <div class="formconfirm hidden"> 
             <span> Merci! Votre réservation a été reçue.</span>
           </div>
+
           <div class="modal-body">
             <form id="form"
               name="reserve"
               action="index.html"
               method="get"
-              onsubmit="return validate();"
-            >
-              <div
-                class="formData success">
+              onsubmit="return checkInputs();">
+
+              <div class="formData success">
                 <label for="first">Prénom</label><br>
                 <input
                   class="text-control"
@@ -209,6 +210,7 @@
                   Je souhaite être prévenu des prochains évènements.
                 </label>
                 <br>
+                <small>Error message</small>
               </div>
               <input
                 class="btn-submit"
