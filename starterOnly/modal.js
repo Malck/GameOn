@@ -40,6 +40,9 @@ const quantity = document.getElementById("quantity");
 const formConfirm = document.querySelector(".formconfirm");
 const checkBoxConditions = document.getElementById("checkbox1");
 
+
+// function pour definir l'erreure et la validation d'un input 
+
 function setErrorFor(input, message) {
   const formControl = input.parentElement; // div .formData
   const small = formControl.querySelector('small');
@@ -59,7 +62,8 @@ function isEmail(email){
   return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
 
-//booleen pour valider l envois du form 
+
+// booleen pour valider l envois du form 
 let isFormValid = false;
 
 // empecher l'envoit du form si les conditions ne sont pas respectées
@@ -67,13 +71,11 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
   
   checkInputs();
-  console.log("probleme");
-
+  
   if(isFormValid){
     form.remove();
     formConfirm.classList.remove("hidden");
   }
-  console.log("here");
 
 });
 
@@ -101,7 +103,7 @@ function checkInputs() {
   }
 
   if(lastValue === '' || last.value.length < 2 ){                 // Nom de famille checking 
-    setErrorFor(last, "Le nom doit faire plus de 2 caracteres");
+    setErrorFor(last, "Le nom doit faire plus de 2 caractères");
   } else {
     setSuccessFor(last);
     fields.lastName = true;
@@ -124,7 +126,7 @@ function checkInputs() {
   }
 
   if(quantityValue === ""){                                   // quantity of tournaments played checking
-    setErrorFor(quantity, "Vous devez choisir un nombre");
+    setErrorFor(quantity, "Vous devez saisir un nombre");
   } else {
     setSuccessFor(quantity);
     fields.quantity = true;
@@ -136,13 +138,11 @@ function checkInputs() {
     setSuccessFor(checkBoxConditions);
     fields.checkBoxConditions = true;
   }
+ // locations must be picked  input radio is checked 
 
-
-// locations must be picked  
-
-
-let fieldsValues = Object.values(fields);
+  let fieldsValues = Object.values(fields);
   console.log('fieldsValues', fieldsValues);
+
   if (fieldsValues.includes(false) == true) {
     console.log("Le formulaire n'est pas valide.");
     return false;
@@ -154,14 +154,3 @@ let fieldsValues = Object.values(fields);
   }
 } 
 
-
-
-
-
-//if (document.querySelectorAll('.form-control')[0].classList.contains('success') && document.querySelectorAll('.form-control')[1].classList.contains('success') && document.querySelectorAll('.form-control')[2].classList.contains('success') && document.querySelectorAll('.form-control')[3].classList.contains('success')) {
-//  form.submit()
-//}
-
-//if(style) {
-  //$('.formconfirm').show();
-//}
