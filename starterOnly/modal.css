@@ -30,9 +30,10 @@
 
 .formconfirm{
   display: block; 
-  margin: 15px auto;
+  margin: 20px auto;
   color: #2ecc71;
-  padding: 20px;
+  padding-top: 20px;
+  width: 280px;
 }
 
 
@@ -112,7 +113,7 @@ img {
 
 @media screen and (max-width:540px) {
   .header-logo img {
-    height: 30px;
+    height: 27px;
     padding-left: 20px;
   }
   .hero-text {
@@ -122,13 +123,18 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 10;
+    background-color: white;
+    width: 100%;
+    margin: 0;
+    height: 40px;
   }
   .hero-content{
     text-align: center;
     min-width: 250px;
   }
   .hero-headline{
-    font-size: 3.5rem;
+    font-size: 3.5rem !important;
   }
 }
 @media screen and (min-width:800px) and (max-width:960px){
@@ -365,7 +371,7 @@ input[data-error]::after {
 .close {
   position: absolute;
   right: 15px;
-  top: 15px;
+  top: 25px;
   width: 32px;
   height: 32px;
   opacity: 1;
@@ -486,7 +492,7 @@ input[data-error]::after {
   color: #fff;
   position: relative;
   text-align: left;
-  min-width: 400px;
+  min-width: 250px;
 }
 .hero-content::after {
   content: "";
@@ -552,7 +558,7 @@ footer {
   .hero-content {
     background: #fff;
     color: #000;
-    padding: 20px;
+    padding: 15px;
   }
   .hero-content::after {
     content: unset;
