@@ -110,7 +110,7 @@ function checkInputs() {
   }
  
   if(emailValue === ""){                         //Email checking  
-    setErrorFor(email, "Email a remplir ");                              
+    setErrorFor(email, "Email à remplir ");                              
   } else if (!isEmail(emailValue)) {
     setErrorFor(email, "Email invalid");
   } else { 
